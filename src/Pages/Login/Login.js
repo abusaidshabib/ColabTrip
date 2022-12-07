@@ -33,7 +33,7 @@ const Login = () => {
                     <GoogleSignIn></GoogleSignIn>
                 </div>
                 <div class="col">
-                    <Form>
+                    <Form onSubmit={handleSubmit(handleLogin)}>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Email address</Form.Label>
                             <input {...register("email", { required: "Email is required" })} type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Your Email Address' />
