@@ -1,0 +1,8 @@
+.cardSize{
+    min-width: 300px;
+    min-height: 300px;
+}
+
+.cardSize:hover{
+    opacity: 0.5;
+}
