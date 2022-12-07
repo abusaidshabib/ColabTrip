@@ -3,7 +3,7 @@ import React from 'react';
 const Booked = () => {
     return (
         <div>
-            Hello I'm Booked
+            <h1>Hello I'm Booked</h1>
         </div>
     );
 };
