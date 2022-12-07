@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom';
 import logo from '../../../assets/Asset 1.png'
+import { AuthContext } from '../../../Context/UserContext/UserContext';
 
 
 const NavBar = () => {
+    const { logOut, user } = useContext(AuthContext);
+
     return (
         <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
             <Container className='text-white'>
@@ -29,14 +32,22 @@ const NavBar = () => {
                         <Link className='nav-link' to="/about">About Us</Link>
                         <Link className='nav-link' to="/dashboard">Dashboard</Link>
                     </Nav>
-                    <Nav>
-                        <Nav.Link href="#deets">
-                            <Link className='btn btn-dark fw-semibold text-uppercase' to="/login">Login</Link>
-                        </Nav.Link>
-                        <Nav.Link eventKey={2} href="#memes">
-                            <Link className='btn btn-dark fw-semibold text-uppercase' to="signup">resister</Link>
-                        </Nav.Link>
-                    </Nav>
+                    {
+                        user?.uid ?
+                            <Link className='text-uppercase btn btn-primary fw-semibold' onClick={logOut}>
+                            logout
+                            </Link>
+                            :
+                            <Nav>
+                                <Nav.Link href="#deets">
+                                    <Link className='btn btn-dark fw-semibold text-uppercase' to="/login">Login</Link>
+                                </Nav.Link>
+                                <Nav.Link eventKey={2} href="#memes">
+                                    <Link className='btn btn-dark fw-semibold text-uppercase' to="signup">resister</Link>
+                                </Nav.Link>
+                            </Nav>
+
+                    }
                 </Navbar.Collapse>
             </Container>
         </Navbar>

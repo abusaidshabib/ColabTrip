@@ -31,6 +31,9 @@ const SignUp = () => {
     }
 
 
+    //verification 57-8
+
+
     const newUser = (email, name, category) => {
         const newreg = {
             email: email,
@@ -68,7 +71,7 @@ const SignUp = () => {
                     <GoogleSignIn></GoogleSignIn>
                 </div>
                 <div class="col">
-                    <Form>
+                    <Form onSubmit={handleSubmit(handleSignUp)}>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Name</Form.Label>
                             <input {...register("name", { required: "Name is required" })} type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Your Name' />
