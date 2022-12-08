@@ -33,7 +33,7 @@ const Login = () => {
                     <GoogleSignIn></GoogleSignIn>
                 </div>
                 <div class="col">
-                    <Form onSubmit={handleSubmit(handleLogin)}>
+                    <Form onSubmit={handleSubmit(handleLogin)} className='text-start'>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Email address</Form.Label>
                             <input {...register("email", { required: "Email is required" })} type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Your Email Address' />
@@ -47,7 +47,9 @@ const Login = () => {
                             })} type="password" class="form-control" id="exampleInputPassword1" placeholder='Your Password' />
                             {errors.password?.type === 'required' && <p className='text-warning' role="alert">Password is required</p>}
                         </Form.Group>
-                        <p>Don't have an account <Link to="/signup" className="text-secondary underline">Please Register</Link></p>
+                        <span className='text-center'>
+                            <p>Don't have an account <Link to="/signup" className="text-secondary underline">Please Register</Link></p>
+                        </span>
                         <input className='btn btn-primary w-100' type="submit" />
                     </Form>
                 </div>

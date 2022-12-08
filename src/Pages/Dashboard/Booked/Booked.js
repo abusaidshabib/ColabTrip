@@ -1,10 +1,21 @@
 import React from 'react';
+import Singlebook from './Singlebook';
 
 const Booked = () => {
     return (
-        <div>
-            <h1>Hello I'm Booked</h1>
-        </div>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Message</th>
+                    <th scope='col'>Date</th>
+                    <th scope='col'>Delete</th>
+                </tr>
+            </thead>
+                <Singlebook></Singlebook>
+        </table>
     );
 };
 
