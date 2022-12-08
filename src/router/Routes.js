@@ -3,6 +3,8 @@ import Dashboard from "../Layout/Dashboard";
 import Main from "../Layout/Main";
 import AboutUs from "../Pages/AboutUs/AboutUs";
 import BookForm from "../Pages/BookForm/BookForm";
+import AddTours from "../Pages/Dashboard/AddTours/AddTours";
+import Booked from "../Pages/Dashboard/Booked/Booked";
 import Gallery from "../Pages/Gallery/Gallery";
 import Home from "../Pages/Home/Home/Home";
 import Login from "../Pages/Login/Login";
@@ -47,6 +49,14 @@ const router = createBrowserRouter([
     {
         path: '/dashboard',
         element: <Dashboard></Dashboard>
+    },
+    {
+        path: '/dashboard/booked',
+        element: <Booked></Booked>
+    },
+    {
+        path: '/dashboard/addtours',
+        element: <AddTours></AddTours>
     }
 ])
 
