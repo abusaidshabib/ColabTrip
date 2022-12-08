@@ -1,30 +1,47 @@
 import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
-import Card from 'react-bootstrap/Card';
-import { Link } from 'react-router-dom';
+import { Card, Col, Container, Row } from 'react-bootstrap';
+
 
 const Places = () => {
-    const BgImg = "https://images.unsplash.com/photo-1669839556036-ba8316adba5f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80";
+
     return (
         <Container className='py-5'>
-            <p className='text-uppercase display-4 fw-bold'>Place Name</p>
-            <Row xs={1} md={2} lg={3} className="g-5 m-0 py-5">
-                <Col className='m-0'>
-                    <Card className='text-white cardSize d-flex justify-content-center align-items-center' style={{
-                        backgroundImage: `url(${BgImg})`,
-                        backgroundSize: 'cover',
-                        backgroundRepeat: 'no-repeat',
-                        backgroundPosition: 'center',
-                        height: 'auto',
-                    }}>
-                        <div>
-                            <p className='text-uppercase display-6 fw-bold'>Place Name</p>
-                            <Link className='btn btn-light text-uppercase fw-semibold'>Make Your Tour</Link>
+            <Row>
+                <Col md={8} sm={12}>
+                    <Card className="text-center border-0">
+                        <Card.Header>
+                            <Row>
+                                <Col><b>Duration</b><br />
+                                    here
+                                </Col>
+                                <Col><b>Group Size</b><br />
+                                    here
+                                </Col>
+                                <Col><b>Language</b><br />
+                                    here
+                                </Col>
+                            </Row>
+                        </Card.Header>
+                        <div className='w-100' style={{ height: '22rem' }}>
+                            <Card.Img variant="top" className='h-100' style={{
+                                objectFit: 'cover',
+                                position: 'center'
+                            }}
+                                src="https://images.unsplash.com/photo-1670439072748-c926be6f8d27?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80" />
                         </div>
+                        <Card.Body>
+                            <Card.Title>Details</Card.Title>
+                            <Card.Text>
+                                With supporting text below as a natural lead-in to additional content.
+                            </Card.Text>
+
+                        </Card.Body>
                     </Card>
                 </Col>
+                <Col>
+                    <p>Book Options</p>
+                </Col>
             </Row>
-            <Link className='btn btn-outline-dark text-uppercase border-2'>See All Places</Link>
         </Container>
     );
 };

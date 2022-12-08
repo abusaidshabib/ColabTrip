@@ -3,7 +3,7 @@ import Singlebook from './Singlebook';
 
 const Booked = () => {
     return (
-        <table class="table table-hover">
+        <table className="table table-hover">
             <thead>
                 <tr>
                     <th scope="col">Name</th>

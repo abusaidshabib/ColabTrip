@@ -18,12 +18,11 @@ const International = () => {
                     }}>
                         <div>
                             <p className='text-uppercase display-6 fw-bold'>Place Name</p>
-                            <Link className='btn btn-light text-uppercase fw-semibold'>Make Your Tour</Link>
+                            <Link to="/places" className='btn btn-light text-uppercase fw-semibold'>Make Your Tour</Link>
                         </div>
                     </Card>
                 </Col>
             </Row>
-            <Link className='btn btn-outline-dark text-uppercase border-2'>See All Places</Link>
         </Container>
     );
 };

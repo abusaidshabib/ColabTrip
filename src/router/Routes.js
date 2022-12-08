@@ -13,8 +13,11 @@ import Gallery from "../Pages/Gallery/Gallery";
 import Home from "../Pages/Home/Home/Home";
 import Login from "../Pages/Login/Login";
 import Places from "../Pages/Places/Places";
+import AirTicks from "../Pages/Services/AirTicks/AirTicks";
+import Bus from "../Pages/Services/Bus/Bus";
 import Domestic from "../Pages/Services/Domestic/Domestic";
 import International from "../Pages/Services/International/International";
+import Ship from "../Pages/Services/Ship/Ship";
 import Trending from "../Pages/Services/Trending/Trending";
 import SignUp from "../Pages/SignUp/SignUp";
 
@@ -66,6 +69,18 @@ const router = createBrowserRouter([
             {
                 path: '/trending',
                 element: <Trending></Trending>
+            },
+            {
+                path: '/airtickets',
+                element: <AirTicks></AirTicks>
+            },
+            {
+                path: '/bustickets',
+                element: <Bus></Bus>
+            },
+            {
+                path: '/shiptickets',
+                element: <Ship></Ship>
             }
         ]
     },

@@ -26,6 +26,9 @@ const NavBar = () => {
                             <Link className='dropdown-item' to="/domestic">DOMESTIC TOUR</Link>
                             <Link className='dropdown-item' to="/international">INTERNATIONAL TOUR</Link>
                             <Link className='dropdown-item' to="/trending">TRENDING TOUR</Link>
+                            <Link className='dropdown-item' to="/airtickets">Air Tickets</Link>
+                            <Link className='dropdown-item' to="/bustickets">Bus Tickets</Link>
+                            <Link className='dropdown-item' to="/shiptickets">Ship Tickets</Link>
                         </NavDropdown>
                         <Link className='nav-link' to="/gallery">Gallery</Link>
                         <Link className='nav-link' to="/about">About Us</Link>

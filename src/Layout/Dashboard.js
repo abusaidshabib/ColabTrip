@@ -41,7 +41,7 @@ const Dashboard = () => {
                     </ul>
                 </div>
                 <div className='content'>
-                    <div className='my-3 d-md-none'><button onClick={handleSideNav} className='btn px-2 py-2 py-0 border'><FaStream /> Toggle</button></div>
+                    <div className='my-3 d-md-none text-end'><button onClick={handleSideNav} className='btn px-2 py-2 py-0 border'><FaStream /></button></div>
                     <Outlet></Outlet>
                 </div>
             </div>

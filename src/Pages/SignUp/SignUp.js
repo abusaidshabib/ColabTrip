@@ -1,6 +1,6 @@
 import { sendEmailVerification } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
-import { Form } from 'react-bootstrap';
+import { Col, Form, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -67,20 +67,20 @@ const SignUp = () => {
     return (
         <div className="m-5">
             <p className='text-uppercase display-4 fw-bold'>Register Now</p>
-            <div class="row align-items-center">
-                <div class="col">
+            <Row className="align-items-center">
+                <Col md={6} sm={12}>
                     <GoogleSignIn></GoogleSignIn>
-                </div>
-                <div class="col">
+                </Col>
+                <Col>
                     <Form onSubmit={handleSubmit(handleSignUp)} className='text-start'>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Name</Form.Label>
-                            <input {...register("name", { required: "Name is required" })} type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Your Name' />
+                            <input {...register("name", { required: "Name is required" })} type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Your Name' />
                             {errors.email?.type === 'required' && <p className='text-red-700' role="alert">Name is required</p>}
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Email address</Form.Label>
-                            <input {...register("email", { required: "Email is required" })} type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Your Email Address' />
+                            <input {...register("email", { required: "Email is required" })} type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Your Email Address' />
                             {errors.email?.type === 'required' && <p className='text-red-700' role="alert">Email is required</p>}
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -88,7 +88,7 @@ const SignUp = () => {
                             <input {...register("password", {
                                 required: "Password is required",
                                 minLength: { value: 6, message: 'Password must be 6 characters or longer' }
-                            })} type="password" class="form-control" id="exampleInputPassword1" placeholder='Your Password' />
+                            })} type="password" className="form-control" id="exampleInputPassword1" placeholder='Your Password' />
                             {errors.password?.type === 'required' && <p className='text-warning' role="alert">Password is required</p>}
                         </Form.Group>
                         <span className='text-center'>
@@ -96,8 +96,8 @@ const SignUp = () => {
                         </span>
                         <input className='btn btn-primary w-100' type="submit" />
                     </Form>
-                </div>
-            </div>
+                </Col>
+            </Row>
         </div >
     );
 };

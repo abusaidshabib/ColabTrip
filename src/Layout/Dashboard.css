@@ -1,5 +1,5 @@
 #side_nav {
-    background: rgba(0, 116, 101, 0.74);
+    background: rgb(0, 116, 101);
     min-width: 250px;
     max-width: 250px;
     transition: all 0.3s;
@@ -10,7 +10,7 @@
     width: 100%;
 }
 
-.active {
+#side_nav .active {
     background: #2b635b;
 }
 
