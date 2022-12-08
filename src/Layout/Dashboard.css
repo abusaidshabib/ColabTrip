@@ -1,0 +1,15 @@
+#side_nav{
+    background: rgba(0, 116, 101, 0.74);
+    min-width: 250px;
+    max-width: 250px;
+}
+
+.content{
+    min-height: 100vh;
+    width: 100%;
+}
+
+.active{
+    background: #ffffff;
+    color: rgb(0, 116, 101);
+}
