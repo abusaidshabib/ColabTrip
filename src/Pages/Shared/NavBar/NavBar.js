@@ -9,7 +9,7 @@ import { AuthContext } from '../../../Context/UserContext/UserContext';
 
 
 const NavBar = () => {
-    const { logOut, user } = useContext(AuthContext);
+    const { logOut, user} = useContext(AuthContext);
 
     return (
         <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
