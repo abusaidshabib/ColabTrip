@@ -8,7 +8,7 @@ const RunningTour = () => {
     const BgImg = "https://images.unsplash.com/photo-1669839556036-ba8316adba5f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80";
     return (
         <Container className='py-5'>
-            <p className='text-uppercase display-4 fw-bold'>Running Tour</p>
+            <p className='text-uppercase display-4 fw-bold'>Trending Tour</p>
             <Row xs={1} md={2} lg={3} className="g-5 m-0 py-5">
                 <Col className='m-0'>
                     <Card className='text-white cardSize d-flex justify-content-center align-items-center' style={{
