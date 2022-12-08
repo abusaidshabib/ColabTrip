@@ -25,7 +25,7 @@ const AllLocation = () => {
                     </Card>
                 </Col>
             </Row>
-            <Link className='btn btn-outline-dark text-uppercase border-2' to='/places'>See All Places</Link>
+            <Link className='btn btn-outline-dark text-uppercase border-2' to='/domestic'>See All Places</Link>
         </Container>
     );
 };

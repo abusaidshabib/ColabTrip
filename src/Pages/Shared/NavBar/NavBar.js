@@ -23,13 +23,13 @@ const NavBar = () => {
                         <Link className='nav-link' to="/">Home</Link>
                         <NavDropdown title="Services" id="collasible-nav-dropdown">
                             <Link className='dropdown-menu' aria-labelledby="navbarDropdown"></Link>
-                            <Link className='dropdown-item'>demo 1</Link>
-                            <Link className='dropdown-item'>demo 1</Link>
-                            <Link className='dropdown-item'>demo 1</Link>
-                            <Link className='dropdown-item'>demo 1</Link>
+                            <Link className='dropdown-item' to="/domestic">DOMESTIC TOUR</Link>
+                            <Link className='dropdown-item' to="/international">INTERNATIONAL TOUR</Link>
+                            <Link className='dropdown-item' to="/trending">TRENDING TOUR</Link>
                         </NavDropdown>
                         <Link className='nav-link' to="/gallery">Gallery</Link>
                         <Link className='nav-link' to="/about">About Us</Link>
+                        <Link className='nav-link' to="/contactus">Contact Us</Link>
                         <Link className='nav-link' to="/dashboard/tours">Dashboard</Link>
                     </Nav>
                     {
