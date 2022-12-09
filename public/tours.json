@@ -1,0 +1,54 @@
+[
+    {
+        "category": "domestic",
+        "location": "Dhaka, Bangladesh",
+        "title": "demo title",
+        "img": "13p1E9ejxAr1ToInr8tHIz4qbEQK7nPIv",
+        "details": "demo details about the tour",
+        "sdate": "2025-12-22",
+        "edate": "2026-12-22",
+        "duration": "4",
+        "fee": "1200",
+        "size": "40",
+        "language": "Bengali"
+    },
+    {
+        "category": "domestic",
+        "location": "Dhaka, Bangladesh",
+        "title": "demo title",
+        "img": "13p1E9ejxAr1ToInr8tHIz4qbEQK7nPIv",
+        "details": "demo details about the tour",
+        "sdate": "2025-12-22",
+        "edate": "2026-12-22",
+        "duration": "4",
+        "fee": "1200",
+        "size": "40",
+        "language": "Bengali"
+    },
+    {
+        "category": "trending",
+        "location": "Dhaka, Bangladesh",
+        "title": "demo title",
+        "img": "13p1E9ejxAr1ToInr8tHIz4qbEQK7nPIv",
+        "details": "demo details about the tour",
+        "sdate": "2025-12-22",
+        "edate": "2026-12-22",
+        "duration": "4",
+        "fee": "1200",
+        "size": "40",
+        "language": "Bengali"
+    },
+    {
+        "category": "international",
+        "location": "Dhaka, Bangladesh",
+        "title": "demo title",
+        "img": "13p1E9ejxAr1ToInr8tHIz4qbEQK7nPIv",
+        "details": "demo details about the tour",
+        "sdate": "2025-12-22",
+        "edate": "2026-12-22",
+        "duration": "4",
+        "fee": "1200",
+        "size": "40",
+        "language": "Bengali"
+    }
+]

@@ -37,6 +37,8 @@ const Dashboard = () => {
                         </li>
                         <li><NavLink to='/dashboard/booked' className='d-flex justify-content-between align-items-center py-2 my-2 px-3 rounded text-decoration-none text-white'><RiHotelLine className='fs-5' />Booked <span className='py-0 px-2 fs-6 bg-white text-black rounded-circle'>2</span></NavLink>
                         </li>
+                        <li><NavLink to='/dashboard/addimg' className='d-flex justify-content-between align-items-center py-2 my-2 px-3 rounded text-decoration-none text-white'><RiHotelLine className='fs-5'/>Add Images<span className='py-0 px-2 fs-6 bg-white text-black rounded-circle'>2</span></NavLink>
+                        </li>
 
                     </ul>
                 </div>

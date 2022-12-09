@@ -41,7 +41,7 @@ const UserContext = ({ children }) => {
     }
 
     //verify Email
-    const verifyEmail = () =>{
+    const verifyEmail = () => {
         return sendEmailVerification(auth.currentUser);
     }
 
@@ -49,7 +49,12 @@ const UserContext = ({ children }) => {
         return updateProfile(auth.currentUser, userInfo);
     }
 
-    const allInfo = { googlePopUp, loading, user, createUser, logOut, signIn, updateUser, verifyEmail };
+
+    const getId = (Id) => {
+        localStorage.setItem('Id', Id);
+    }
+
+    const allInfo = { googlePopUp, loading, user, createUser, logOut, signIn, updateUser, verifyEmail,getId };
 
     return (
         <div>

@@ -1,7 +1,8 @@
 import React from 'react';
-import { Form } from 'react-bootstrap';
+import { Form, ToastContainer } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
 
 const AddTours = () => {
     const { register, handleSubmit, reset } = useForm();
@@ -12,7 +13,7 @@ const AddTours = () => {
         const form = event.target;
         const location = form.location.value;
         const title = form.title.value;
-        const img = form.img.value;
+        const temp = form.img.value;
         const details = form.details.value;
         const sdate = form.sdate.value;
         const edate = form.edate.value;
@@ -20,9 +21,33 @@ const AddTours = () => {
         const fee = form.fee.value;
         const size = form.size.value;
         const language = form.language.value;
-        const condition = form.condition.value;
+        const category = form.category.value;
 
-        console.log(location, title, img, details, sdate, edate, duration, fee, size, language, condition);
+        let temp1 = temp.replace("https://drive.google.com/file/d/", "");
+        let temp2 = temp1.replace("/view?usp=", "");
+        let temp3 = temp2.replace("share_link", "");
+        let url = temp3.replace("sharing", "");
+
+        const img = `http://drive.google.com/uc?export=view&id=${url}`;
+
+
+        console.log(location, title, img, details, sdate, edate, duration, fee, size, language, category);
+        const newTour = {
+            location, title, img, details, sdate, edate, duration, fee, size, language, category
+        }
+        fetch('http://localhost:5000/tours', {
+            method: "POST",
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newTour)
+        })
+            .then(res => res.json())
+            .then(data => {
+                toast.success('Item added');
+                form.reset();
+            })
+            .catch(error => console.log(error));
 
     }
 
@@ -34,13 +59,13 @@ const AddTours = () => {
                 <Form className='text-start' onSubmit={handleSignUp}>
 
 
-                    {/* Locations */}
+                    {/* category */}
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Tour Location</Form.Label>
-                        <select name='condition' className='text-uppercase font-normal'>
-                            <option>Domestic Tour</option>
-                            <option>International Tour</option>
-                            <option>Trending Tour</option>
+                        <select name='category' className='font-normal text-uppercase'>
+                            <option>domestic</option>
+                            <option>international</option>
+                            <option>trending</option>
                         </select>
 
                         <Form.Label>Tour Location</Form.Label>
@@ -95,6 +120,7 @@ const AddTours = () => {
                     <input className='btn btn-primary w-100' type="submit" />
                 </Form>
             </div>
+            <ToastContainer/>
         </div >
     );
 };

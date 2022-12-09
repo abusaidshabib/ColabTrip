@@ -1,37 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Card, Container } from 'react-bootstrap';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 import './Gallery.css';
 
 const Gallery = () => {
+    const [img, setImg] = useState([]);
 
-    const datas = [
-        {
-            "img": "https://images.unsplash.com/photo-1669837401587-f9a4cfe3126e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-            "id": 1,
-        },
-        {
-            "img": "https://images.unsplash.com/photo-1669391848393-c2be5c1bf124?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-            "id": 2,
-        },
-        {
-            "img": "https://images.unsplash.com/photo-1669824137673-91f8f75f87fb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-            "id": 3,
-        },
-        {
-            "img": "https://images.unsplash.com/photo-1664575197229-3bbebc281874?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-            "id": 4,
-        },
-        {
-            "img": "https://images.unsplash.com/photo-1669732464953-33b492a5206f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80",
-            "id": 5,
-        },
-        {
-            "img": "https://images.unsplash.com/photo-1669847206032-c4257c96923f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-            "id": 6,
-        },
-    ]
+    useEffect(() => {
+        fetch('http://localhost:5000/gallery')
+            .then(res => res.json())
+            .then(data => {
+                setImg(data);
+            }, [])
+    })
+
 
     return (
         <PhotoProvider
@@ -52,7 +35,7 @@ const Gallery = () => {
             <Container className='py-5'>
                 <div className='gallery'>
                     {
-                        datas.map(data => <div className='pics' key={data.id}>
+                       img.map(data => <div className='pics' key={data._id}>
                             <PhotoView src={data.img}>
                                 <img src={data.img} alt="" style={{ width: '100%' }} />
                             </PhotoView>

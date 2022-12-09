@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Card, Col, Container, Row } from 'react-bootstrap';
 
 
 const Places = () => {
+
+    const [dat, setData] = useState();
+    useEffect(() => {
+        fetch(`http://localhost:5000/tours/${localStorage.getItem('Id')}`)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                setData(data);
+            })
+    })
 
     return (
         <Container className='py-5'>
@@ -12,13 +22,13 @@ const Places = () => {
                         <Card.Header>
                             <Row>
                                 <Col><b>Duration</b><br />
-                                    here
+                                    {dat?.duration}
                                 </Col>
                                 <Col><b>Group Size</b><br />
-                                    here
+                                    {dat?.size}
                                 </Col>
                                 <Col><b>Language</b><br />
-                                    here
+                                    {dat?.language}
                                 </Col>
                             </Row>
                         </Card.Header>
@@ -27,12 +37,12 @@ const Places = () => {
                                 objectFit: 'cover',
                                 position: 'center'
                             }}
-                                src="https://images.unsplash.com/photo-1670439072748-c926be6f8d27?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80" />
+                                src={dat?.img} />
                         </div>
                         <Card.Body>
-                            <Card.Title>Details</Card.Title>
+                            <Card.Title>{dat?.title}</Card.Title>
                             <Card.Text>
-                                With supporting text below as a natural lead-in to additional content.
+                                {dat?.details}
                             </Card.Text>
 
                         </Card.Body>

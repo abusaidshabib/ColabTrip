@@ -4,6 +4,7 @@ import Main from "../Layout/Main";
 import AboutUs from "../Pages/AboutUs/AboutUs";
 import BookForm from "../Pages/BookForm/BookForm";
 import ContactUs from "../Pages/ContactUs/ContactUs";
+import AddImg from "../Pages/Dashboard/AddImg/AddImg";
 import AddTours from "../Pages/Dashboard/AddTours/AddTours";
 import Booked from "../Pages/Dashboard/Booked/Booked";
 import Flights from "../Pages/Dashboard/Flights/Flights";
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
                 element: <Home></Home>
             },
             {
-                path: '/places',
+                path: '/places/:id',
                 element: <Places></Places>
             },
             {
@@ -107,6 +108,10 @@ const router = createBrowserRouter([
             {
                 path: '/dashboard/addtours',
                 element: <AddTours></AddTours>
+            },
+            {
+                path: '/dashboard/addimg',
+                element: <AddImg></AddImg>
             }
         ]
 

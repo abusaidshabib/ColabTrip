@@ -19,7 +19,7 @@ const NavBar = () => {
                 </Link>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="me-auto text-uppercase fs-6 fw-semibold" style={{ letterSpacing: '.5px' }}>
+                    <Nav className="me-auto text-uppercase" style={{ letterSpacing: '.5px' }}>
                         <Link className='nav-link' to="/">Home</Link>
                         <NavDropdown title="Services" id="collasible-nav-dropdown">
                             <Link className='dropdown-menu' aria-labelledby="navbarDropdown"></Link>
