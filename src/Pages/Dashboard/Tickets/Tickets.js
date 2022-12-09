@@ -1,13 +1,25 @@
 import React, { useState } from 'react';
 import { Button, Modal } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 
-const Tickets = ({tick}) => {
+const Tickets = ({ tick }) => {
 
     const [show, setShow] = useState(false);
-
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+
+    const handleDelete = id => {
+        const proceed = window.confirm('Are you want to delete this review')
+        if (proceed) {
+            fetch(`http://localhost:5000/tickets/${tick._id}`, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                })
+        }
+    }
 
     return (
         <tbody>
@@ -23,7 +35,7 @@ const Tickets = ({tick}) => {
                     </td>
                     <td>{tick.number}</td>
                     <td>
-                        <Link className='btn btn-warning'>Delete</Link>
+                        <button onClick={handleDelete} className='btn btn-warning'>Delete</button>
                     </td>
                 </tr>
             }
