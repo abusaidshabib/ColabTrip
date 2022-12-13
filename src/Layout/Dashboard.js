@@ -1,8 +1,7 @@
 import NavBar from '../Pages/Shared/NavBar/NavBar';
 import './Dashboard.css';
 import { FaStream } from 'react-icons/fa';
-import { RiHotelLine } from 'react-icons/ri';
-import { GiIsland, GiCommercialAirplane } from 'react-icons/gi';
+import { GiCommercialAirplane, GiBus, GiShipBow } from 'react-icons/gi';
 import { NavLink, Outlet } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -23,21 +22,21 @@ const Dashboard = () => {
                     </div>
 
                     <ul className='list-unstyled px-3 text-start'>
-                        <li><NavLink to='/dashboard/flights' className='d-flex justify-content-between align-items-center py-2 my-2 px-3 rounded text-decoration-none text-white'><GiCommercialAirplane className='fs-5' />Air Tickets <span className='py-0 px-2 fs-6 bg-white text-black rounded-circle'>2</span></NavLink>
+                        <li><NavLink to='/dashboard/flights' className='d-flex justify-content-between align-items-center py-2 my-2 px-3 rounded text-decoration-none text-white'><GiCommercialAirplane className='fs-5' />Air Tickets</NavLink>
 
                         </li>
-                        <li><NavLink to='/dashboard/tours' className='d-flex justify-content-between align-items-center py-2 my-2 px-3 rounded text-decoration-none text-white'><GiIsland className='fs-5' />Bus Tickets<span className='py-0 px-2 fs-6 bg-white text-black rounded-circle'>2</span></NavLink>
+                        <li><NavLink to='/dashboard/tours' className='d-flex justify-content-between align-items-center py-2 my-2 px-3 rounded text-decoration-none text-white'><GiBus className='fs-5' />Bus Ticket</NavLink>
 
                         </li>
-                        <li><NavLink to='/dashboard/hotels' className='d-flex justify-content-between align-items-center py-2 my-2 px-3 rounded text-decoration-none text-white'><RiHotelLine className='fs-5' />Ship Tickets<span className='py-0 px-2 fs-6 bg-white text-black rounded-circle'>2</span></NavLink>
+                        <li><NavLink to='/dashboard/hotels' className='d-flex justify-content-between align-items-center py-2 my-2 px-3 rounded text-decoration-none text-white'><GiShipBow className='fs-5' />Ship Ticket</NavLink>
 
                         </li>
 
-                        <li><NavLink to='/dashboard/addtours' className='d-flex justify-content-between align-items-center py-2 my-2 px-3 rounded text-decoration-none text-white'><RiHotelLine className='fs-5' />Add Tours <span className='py-0 px-2 fs-6 bg-white text-black rounded-circle'>2</span></NavLink>
+                        <li><NavLink to='/dashboard/addtours' className='d-flex justify-content-between align-items-center py-2 my-2 px-3 rounded text-decoration-none text-white'>Add Tours</NavLink>
                         </li>
-                        <li><NavLink to='/dashboard/booked' className='d-flex justify-content-between align-items-center py-2 my-2 px-3 rounded text-decoration-none text-white'><RiHotelLine className='fs-5' />Booked <span className='py-0 px-2 fs-6 bg-white text-black rounded-circle'>2</span></NavLink>
+                        <li><NavLink to='/dashboard/booked' className='d-flex justify-content-between align-items-center py-2 my-2 px-3 rounded text-decoration-none text-white'>Booked</NavLink>
                         </li>
-                        <li><NavLink to='/dashboard/addimg' className='d-flex justify-content-between align-items-center py-2 my-2 px-3 rounded text-decoration-none text-white'><RiHotelLine className='fs-5' />Add Images<span className='py-0 px-2 fs-6 bg-white text-black rounded-circle'>2</span></NavLink>
+                        <li><NavLink to='/dashboard/addimg' className='d-flex justify-content-between align-items-center py-2 my-2 px-3 rounded text-decoration-none text-white'>Add Image</NavLink>
                         </li>
 
                     </ul>
