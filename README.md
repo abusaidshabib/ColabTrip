@@ -1,6 +1,6 @@
 Review
-footer
-our achivement
+<!-- footer
+our achivement -->
 about
 contact us
 rules add

@@ -1,29 +1,44 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import footerLogo from '../../../assets/Asset 1.png';
+import { BsFacebook, BsWhatsapp } from 'react-icons/bs';
+import { GrInstagram } from 'react-icons/gr';
 
 const Footer = () => {
     return (
         <div className="bg-dark">
             <div className='row container m-auto py-5'>
                 <div className='col text-white text-start'>
-                    <span className="fw-semibold fs-2">Services</span>
-                    <Link to="/" className="nav-link fs-6 text-uppercase fw-semibold">Branding</Link>
-                    <Link to="/" className="nav-link fs-6 text-uppercase fw-semibold">Design</Link>
-                    <Link to="/" className="nav-link fs-6 text-uppercase fw-semibold">Marketing</Link>
-                    <Link to="/" className="nav-link fs-6 text-uppercase fw-semibold">Advertisement</Link>
+                    <img className='w-25' alt='' src={footerLogo} />
+                    <p className='mt-4 mb-1'>Follow us On:</p>
+                    <div className='fs-4'>
+                        <a className='text-white me-2' href='#'><BsFacebook /></a>
+                        <a className='text-white me-2' href='#'><GrInstagram /></a>
+                        <a className='text-white' href='#'><BsWhatsapp /></a>
+                    </div>
                 </div>
-                <div className='col text-white text-center'>
-                    <span className="fw-semibold fs-2">Company</span>
-                    <Link to="/" className="nav-link fs-6 text-uppercase fw-semibold">About us</Link>
-                    <Link to="/" className="nav-link fs-6 text-uppercase fw-semibold">Contact</Link>
-                    <Link to="/" className="nav-link fs-6 text-uppercase fw-semibold">Jobs</Link>
-                    <Link to="/" className="nav-link fs-6 text-uppercase fw-semibold">Press kit</Link>
+                <div className='col text-white text-left'>
+                    <span className="fw-semibold fs-4 mb-3">All Services</span>
+                    <Link to="/" className="nav-link fs-6">Domestic Tour</Link>
+                    <Link to="/" className="nav-link fs-6">International Tour</Link>
+                    <Link to="/" className="nav-link fs-6">Trending Tour</Link>
+                    <Link to="/" className="nav-link fs-6">Air Tickets</Link>
+                    <Link to="/" className="nav-link fs-6">Bus Tickets</Link>
+                    <Link to="/" className="nav-link fs-6">Ship Tickets</Link>
+
                 </div>
                 <div className='col text-white text-end'>
-                    <span className="fw-semibold fs-2">Legal</span>
-                    <Link to="/" className="nav-link fs-6 text-uppercase fw-semibold">Terms of use</Link>
-                    <Link to="/" className="nav-link fs-6 text-uppercase fw-semibold">Privacy policy</Link>
-                    <Link to="/" className="nav-link fs-6 text-uppercase fw-semibold">Cookie policy</Link>
+                    <p>Our Office: House 31/A, Road 21 Nikunja-2, Khilkhet, Dhaka.</p>
+                    <p>Call Us:
+                        +880 1894-442421,
+                        +880 1894-442422,
+                        +880 1894-442423,
+                        +880 1894-442424,
+                        +880 1894-442425,
+                        +880 1894-442426
+                    </p>
+                    <p>Email: tripwalletbd@gmail.com</p>
+
                 </div>
             </div>
             <hr className='text-white' />
