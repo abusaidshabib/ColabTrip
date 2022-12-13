@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Dashboard from "../Layout/Dashboard";
 import Main from "../Layout/Main";
 import AboutUs from "../Pages/AboutUs/AboutUs";
+import Addreview from "../Pages/AddReview/Addreview";
 import BookForm from "../Pages/BookForm/BookForm";
 import ContactUs from "../Pages/ContactUs/ContactUs";
 import AddImg from "../Pages/Dashboard/AddImg/AddImg";
@@ -82,6 +83,10 @@ const router = createBrowserRouter([
             {
                 path: '/shiptickets',
                 element: <Ship></Ship>
+            },
+            {
+                path: '/addreview',
+                element: <Addreview></Addreview>
             }
         ]
     },

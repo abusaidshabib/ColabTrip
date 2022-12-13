@@ -52,6 +52,7 @@ const NavBar = () => {
                                     </NavDropdown>
                                     <Link className='nav-link' to="/gallery">Gallery</Link>
                                     <Link className='nav-link' to="/about">About Us</Link>
+                                    <Link className='nav-link' to="/addreview">Add Reviews</Link>
                                     <Link className='nav-link' to="/contactus">Contact Us</Link>
                                     <Link className='nav-link' to="/dashboard/tours">Dashboard</Link>
                                     {

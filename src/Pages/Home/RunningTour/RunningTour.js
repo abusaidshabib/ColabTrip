@@ -13,7 +13,6 @@ const RunningTour = () => {
         fetch('http://localhost:5000/tours?category=trending')
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 setTour(data);
             }, [])
     })

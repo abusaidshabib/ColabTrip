@@ -16,7 +16,6 @@ const Home = () => {
             <RunningTour></RunningTour>
             <Achivements></Achivements>
             <ClientReview></ClientReview>
-            <Addreview></Addreview>
         </div>
     );
 };

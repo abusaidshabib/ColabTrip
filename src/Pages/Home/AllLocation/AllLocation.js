@@ -13,7 +13,6 @@ const AllLocation = () => {
         fetch('http://localhost:5000/tours?category=domestic')
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 setTour(data);
             }, [])
     })
