@@ -1,7 +1,7 @@
 Review
 <!-- footer
 our achivement -->
-about
+<!-- about -->
 contact us
 rules add
 booking show and delete

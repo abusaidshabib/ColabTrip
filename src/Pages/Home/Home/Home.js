@@ -1,5 +1,4 @@
 import React from 'react';
-import Addreview from '../../AddReview/Addreview';
 import Achivements from '../Achivements/Achivements';
 import AllLocation from '../AllLocation/AllLocation';
 import ClientReview from '../ClientReview/ClientReview';

@@ -1,8 +1,6 @@
 import React, { useContext } from 'react';
-import { Col, Form, Row, ToastContainer } from 'react-bootstrap';
+import { Col, Form, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
-import { toast } from 'react-toastify';
 import { AuthContext } from '../../../Context/UserContext/UserContext';
 
 const AirTicks = () => {
@@ -30,6 +28,7 @@ const AirTicks = () => {
         })
             .then(res => res.json())
             .then(data => {
+                console.log(data)
             })
             .catch(error => console.log(error));
 
