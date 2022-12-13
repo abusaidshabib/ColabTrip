@@ -1,4 +1,5 @@
 import React from 'react';
+import Addreview from '../../AddReview/Addreview';
 import Achivements from '../Achivements/Achivements';
 import AllLocation from '../AllLocation/AllLocation';
 import ClientReview from '../ClientReview/ClientReview';
@@ -15,6 +16,7 @@ const Home = () => {
             <RunningTour></RunningTour>
             <Achivements></Achivements>
             <ClientReview></ClientReview>
+            <Addreview></Addreview>
         </div>
     );
 };
