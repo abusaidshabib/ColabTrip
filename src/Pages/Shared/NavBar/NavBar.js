@@ -6,7 +6,6 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom';
 import logo from '../../../assets/Asset 1.png'
 import { AuthContext } from '../../../Context/UserContext/UserContext';
-import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
 
@@ -55,13 +54,22 @@ const NavBar = () => {
                                     <Link className='nav-link' to="/about">About Us</Link>
                                     <Link className='nav-link' to="/contactus">Contact Us</Link>
                                     <Link className='nav-link' to="/dashboard/tours">Dashboard</Link>
+                                    {
+                                        user?.uid ?
+                                            <Link className='text-uppercase btn btn-primary fw-semibold' onClick={logOut}>logout</Link>
+                                            :
+                                            <>
+                                                <Link className='btn btn-dark fw-semibold nav-link text-white' to="/login">Login</Link>
+                                                <Link className='btn btn-dark fw-semibold nav-link text-white mt-2' to="signup">Resister</Link>
+                                            </>
+                                    }
                                 </Nav>
                             </Offcanvas.Body>
                         </Navbar.Offcanvas>
 
                         <Link className='navbar-brand' to="/"><img className="w-25" alt="" src={logo} /></Link>
 
-                        <div class="row">
+                        <div className="row d-none d-sm-block">
                             {
                                 user?.uid ? <Link className='text-uppercase btn btn-primary fw-semibold' onClick={logOut}>
                                     logout
