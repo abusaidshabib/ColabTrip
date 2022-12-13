@@ -7,22 +7,22 @@ const HeroSection = () => {
   const heroDatas = [
     {
       "img": "https://images.unsplash.com/photo-1530789253388-582c481c54b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-      "title": "First Title",
-      "paragraph": "First Paragraph",
+      "title": "The World in Your Pocket ",
+      "paragraph": "Book your favourite trip today",
       "index": 1
 
     },
     {
       "img": "https://images.unsplash.com/photo-1546587348-d12660c30c50?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80",
-      "title": "second Title",
-      "paragraph": "second Paragraph",
+      "title": "The World in Your Pocket ",
+      "paragraph": "Book your favourite trip today",
       "index": 2
 
     },
     {
       "img": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-      "title": "third Title",
-      "paragraph": "third Paragraph",
+      "title": "The World in Your Pocket ",
+      "paragraph": "Book your favourite trip today",
       "index": 3
 
     }
