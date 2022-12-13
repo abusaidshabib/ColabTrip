@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Singlebook = () => {
 
     //Delete must needed
     
+
+    const [airs, setAir] = useState([]);
+    useEffect(() => {
+        fetch('http://localhost:5000/tickets?category=air')
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                setAir(data);
+            }, [])
+    })
 
     return (
         <tbody>

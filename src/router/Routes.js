@@ -23,6 +23,8 @@ import International from "../Pages/Services/International/International";
 import Ship from "../Pages/Services/Ship/Ship";
 import Trending from "../Pages/Services/Trending/Trending";
 import SignUp from "../Pages/SignUp/SignUp";
+import AdminRoute from "./AdminRoute/AdminRoute";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -93,7 +95,7 @@ const router = createBrowserRouter([
     },
     {
         path: '/dashboard',
-        element: <Dashboard></Dashboard>,
+        element: <AdminRoute><Dashboard></Dashboard></AdminRoute>,
         children: [
             {
                 path: '/dashboard/tours',
