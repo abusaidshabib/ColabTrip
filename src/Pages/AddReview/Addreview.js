@@ -7,7 +7,8 @@ const Addreview = () => {
 
     const handleReview = event =>{
         event.preventDefault();
-        
+        const form = event.target;
+        console.log(form);
     }
 
     return (
