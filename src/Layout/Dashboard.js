@@ -38,6 +38,8 @@ const Dashboard = () => {
                         </li>
                         <li><NavLink to='/dashboard/addimg' className='d-flex justify-content-between align-items-center py-2 my-2 px-3 rounded text-decoration-none text-white'>Add Image</NavLink>
                         </li>
+                        <li><NavLink to='/dashboard/alltours' className='d-flex justify-content-between align-items-center py-2 my-2 px-3 rounded text-decoration-none text-white'>All Tours</NavLink>
+                        </li>
 
                     </ul>
                 </div>
