@@ -15,17 +15,19 @@ const NavBar = () => {
 
     return (
 
+
         <>
             {[false].map((expand) => (
                 <Navbar key={expand} bg="light" expand={expand}>
                     <Container fluid>
-                        <Link className='navbar-brand' to="/"><img className="w-25" alt="" src={logo} /></Link>
                         <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
+
                         <Navbar.Offcanvas
                             id={`offcanvasNavbar-expand-${expand}`}
                             aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
                             placement="end"
                         >
+
                             <Offcanvas.Header closeButton>
                                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
                                 </Offcanvas.Title>
@@ -56,6 +58,29 @@ const NavBar = () => {
                                 </Nav>
                             </Offcanvas.Body>
                         </Navbar.Offcanvas>
+
+                        <Link className='navbar-brand' to="/"><img className="w-25" alt="" src={logo} /></Link>
+
+                        <div class="row">
+                            {
+                                user?.uid ? <Link className='text-uppercase btn btn-primary fw-semibold' onClick={logOut}>
+                                    logout
+                                </Link>
+                                    :
+                                    <div className='nav'>
+                                        <div className='col'>
+                                            <Link className='btn btn-dark fw-semibold nav-link text-white' to="/login">Login</Link>
+                                        </div>
+                                        <div className='col'>
+                                            <Link className='btn btn-dark fw-semibold nav-link text-white ms-2' to="signup">Resister</Link>
+                                        </div>
+                                    </div>
+                            }
+                        </div>
+
+
+
+
                     </Container>
                 </Navbar>
             ))}
