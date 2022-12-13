@@ -13,7 +13,6 @@ const Places = () => {
         fetch(`http://localhost:5000/tours/${localStorage.getItem('Id')}`)
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 setData(data);
             })
     })
@@ -25,7 +24,7 @@ const Places = () => {
         const message = event.message;
         const title = dat?.title;
 
-        console.log(name, email, number, message);
+        console.log(name, email, number, message, title);
         const newData = { name, email, number, message, title };
 
 
@@ -38,6 +37,7 @@ const Places = () => {
         })
             .then(res => res.json())
             .then(data => {
+                console.log(data);
             })
             .catch(error => console.log(error));
 

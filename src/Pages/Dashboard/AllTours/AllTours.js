@@ -1,22 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 
-const Booked = () => {
-
-    const [books, setBook] = useState([]);
+const AllTours = () => {
+    const [tours, setTours] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/booking')
+        fetch('http://localhost:5000/tours')
             .then(res => res.json())
             .then(data => {
-                setBook(data);
+                setTours(data);
             }, [])
     })
 
     const handleDelete = id => {
         const proceed = window.confirm('Are you want to delete this review')
         if (proceed) {
-            fetch(`http://localhost:5000/booking/${id}`, {
+            fetch(`http://localhost:5000/tours/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -30,22 +28,16 @@ const Booked = () => {
         <table className="table table-hover">
             <thead>
                 <tr>
-                    <th scope="col">Name</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Phone</th>
                     <th scope="col">Title</th>
                     <th scope='col'>Delete</th>
                 </tr>
             </thead>
             <tbody>
                 {
-                    books.map(book => <tr key={book._id}>
-                        <th scope="row">{book.name}</th>
-                        <td>{book.email}</td>
-                        <td>{book.number}</td>
-                        <td>{book.title}</td>
+                    tours.map(tour => <tr key={tour._id}>
+                        <td>{tour.title}</td>
                         <td>
-                            <button onClick={()=>handleDelete(book._id)} className='btn btn-warning'>Delete</button>
+                            <button onClick={() => handleDelete(tour._id)} className='btn btn-warning'>Delete</button>
                         </td>
                     </tr>)
                 }
@@ -54,4 +46,4 @@ const Booked = () => {
     );
 };
 
-export default Booked;
+export default AllTours;

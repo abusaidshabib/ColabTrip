@@ -7,6 +7,7 @@ import BookForm from "../Pages/BookForm/BookForm";
 import ContactUs from "../Pages/ContactUs/ContactUs";
 import AddImg from "../Pages/Dashboard/AddImg/AddImg";
 import AddTours from "../Pages/Dashboard/AddTours/AddTours";
+import AllTours from "../Pages/Dashboard/AllTours/AllTours";
 import Booked from "../Pages/Dashboard/Booked/Booked";
 import Flights from "../Pages/Dashboard/Flights/Flights";
 import Hotels from "../Pages/Dashboard/Hotels/Hotels";
@@ -117,6 +118,10 @@ const router = createBrowserRouter([
             {
                 path: '/dashboard/addimg',
                 element: <AddImg></AddImg>
+            },
+            {
+                path: '/dashboard/alltours',
+                element: <AllTours></AllTours>
             }
         ]
 
