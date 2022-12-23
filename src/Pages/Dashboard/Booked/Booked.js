@@ -6,7 +6,7 @@ const Booked = () => {
     const [books, setBook] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/booking')
+        fetch('https://tripwallet-backend.vercel.app/booking')
             .then(res => res.json())
             .then(data => {
                 setBook(data);
@@ -16,7 +16,7 @@ const Booked = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you want to delete this review')
         if (proceed) {
-            fetch(`http://localhost:5000/booking/${id}`, {
+            fetch(`https://tripwallet-backend.vercel.app/booking/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

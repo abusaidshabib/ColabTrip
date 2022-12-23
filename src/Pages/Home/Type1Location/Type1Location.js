@@ -9,7 +9,7 @@ const Type1Location = () => {
     const [tours, setTour] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/tours?category=trending')
+        fetch('https://tripwallet-backend.vercel.app/tours?category=trending')
             .then(res => res.json())
             .then(data => {
                 setTour(data);

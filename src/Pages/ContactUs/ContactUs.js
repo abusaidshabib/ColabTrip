@@ -16,7 +16,7 @@ const ContactUs = () => {
                 </p>
                 <p>Email: tripwalletbd@gmail.com</p>
             </span>
-            <a href="http://" target="_blank" rel="noopener noreferrer">Go to A</a>
+            <a href="https://www.facebook.com/tripwallet?mibextid=ZbWKwL" target="_blank" className='btn btn-primary' rel="noopener noreferrer">Connect with our facebook page</a>
         </div>
     );
 };

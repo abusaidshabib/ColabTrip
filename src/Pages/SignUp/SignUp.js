@@ -2,7 +2,7 @@ import { sendEmailVerification } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
 import { Col, Form, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { AuthContext } from '../../Context/UserContext/UserContext';
 import GoogleSignIn from '../Shared/GoogleSignIn/GoogleSignIn';
@@ -11,6 +11,8 @@ const SignUp = () => {
     const { createUser, updateUser, verifyEmail } = useContext(AuthContext);
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
     const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
     const [userEmail, setUserEmail] = useState('');
 
 
@@ -29,6 +31,7 @@ const SignUp = () => {
                     })
                     .catch(error => console.log(error));
                 verifyEmail();
+                navigate(from, { replace: true });
             })
             .catch(error => console.log(error));
     }

@@ -9,7 +9,7 @@ const International = () => {
     const [tours, setTour] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/tours?category=international')
+        fetch('https://tripwallet-backend.vercel.app/tours?category=international')
             .then(res => res.json())
             .then(data => {
                 console.log(data);

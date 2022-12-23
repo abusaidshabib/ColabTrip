@@ -11,7 +11,7 @@ const Tickets = ({ tick }) => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you want to delete this review')
         if (proceed) {
-            fetch(`http://localhost:5000/tickets/${tick._id}`, {
+            fetch(`https://tripwallet-backend.vercel.app/tickets/${tick._id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

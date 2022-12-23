@@ -37,11 +37,11 @@ const router = createBrowserRouter([
             },
             {
                 path: '/places/:id',
-                element: <Places></Places>
+                element: <PrivateRoute><Places></Places></PrivateRoute>
             },
             {
                 path: '/book',
-                element: <BookForm></BookForm>
+                element: <PrivateRoute><BookForm></BookForm></PrivateRoute>
             },
             {
                 path: '/about',
@@ -77,19 +77,19 @@ const router = createBrowserRouter([
             },
             {
                 path: '/airtickets',
-                element: <AirTicks></AirTicks>
+                element: <PrivateRoute><AirTicks></AirTicks></PrivateRoute>
             },
             {
                 path: '/bustickets',
-                element: <Bus></Bus>
+                element: <PrivateRoute><Bus></Bus></PrivateRoute>
             },
             {
                 path: '/shiptickets',
-                element: <Ship></Ship>
+                element: <PrivateRoute><Ship></Ship></PrivateRoute>
             },
             {
                 path: '/addreview',
-                element: <Addreview></Addreview>
+                element: <PrivateRoute><Addreview></Addreview></PrivateRoute>
             }
         ]
     },

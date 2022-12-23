@@ -4,7 +4,7 @@ import Tickets from '../Tickets/Tickets';
 const Tours = () => {
     const [buses, setBuses] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/tickets?category=bus')
+        fetch('https://tripwallet-backend.vercel.app/tickets?category=bus')
             .then(res => res.json())
             .then(data => {
                 console.log(data);

@@ -8,7 +8,7 @@ const Gallery = () => {
     const [img, setImg] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/gallery')
+        fetch('https://tripwallet-backend.vercel.app/gallery')
             .then(res => res.json())
             .then(data => {
                 setImg(data);

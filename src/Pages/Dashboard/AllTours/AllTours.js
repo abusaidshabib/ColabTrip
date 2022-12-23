@@ -4,7 +4,7 @@ const AllTours = () => {
     const [tours, setTours] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/tours')
+        fetch('https://tripwallet-backend.vercel.app/tours')
             .then(res => res.json())
             .then(data => {
                 setTours(data);
@@ -14,7 +14,7 @@ const AllTours = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you want to delete this review')
         if (proceed) {
-            fetch(`http://localhost:5000/tours/${id}`, {
+            fetch(`https://tripwallet-backend.vercel.app/tours/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

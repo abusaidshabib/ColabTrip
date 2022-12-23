@@ -38,7 +38,7 @@ const NavBar = () => {
                                         title="Services"
                                         id={`offcanvasNavbarDropdown-expand-${expand}`}
                                     >
-                                        <Link to="/trending" className='dropdown-item'>Trending Tour</Link>
+                                        <Link to="/trending" className='dropdown-item'>Tour Package</Link>
                                         <Link to="/airtickets" className='dropdown-item'>Air Tickets</Link>
                                         <Link to="/bustickets" className='dropdown-item'>Bus Tickets</Link>
                                         <Link to="/shiptickets" className='dropdown-item'>Ship Tickets</Link>
@@ -48,20 +48,22 @@ const NavBar = () => {
                                         id={`offcanvasNavbarDropdown-expand-${expand}`}
                                     >
                                         <Link to="/domestic" className='dropdown-item'>Domestic Tour</Link>
-                                        <Link to="/international" className='dropdown-item'>International</Link>
+                                        <Link to="/international" className='dropdown-item'>International Tour</Link>
                                     </NavDropdown>
                                     <Link className='nav-link' to="/gallery">Gallery</Link>
                                     <Link className='nav-link' to="/about">About Us</Link>
                                     <Link className='nav-link' to="/addreview">Add Reviews</Link>
                                     <Link className='nav-link' to="/contactus">Contact Us</Link>
-                                    <Link className='nav-link' to="/dashboard/tours">Dashboard</Link>
+                                    {
+                                        user?.email === "tripwalletbd2022@gmail.com" && <Link className='nav-link' to="/dashboard/tours">Dashboard</Link>
+                                    }
                                     {
                                         user?.uid ?
                                             <Link className='text-uppercase btn btn-primary fw-semibold' onClick={logOut}>logout</Link>
                                             :
                                             <>
                                                 <Link className='btn btn-dark fw-semibold nav-link text-white' to="/login">Login</Link>
-                                                <Link className='btn btn-dark fw-semibold nav-link text-white mt-2' to="signup">Resister</Link>
+                                                <Link className='btn btn-dark fw-semibold nav-link text-white mt-2' to="signup">Register</Link>
                                             </>
                                     }
                                 </Nav>
@@ -81,7 +83,7 @@ const NavBar = () => {
                                             <Link className='btn btn-dark fw-semibold nav-link text-white' to="/login">Login</Link>
                                         </div>
                                         <div className='col'>
-                                            <Link className='btn btn-dark fw-semibold nav-link text-white ms-2' to="signup">Resister</Link>
+                                            <Link className='btn btn-dark fw-semibold nav-link text-white ms-2' to="signup">Register</Link>
                                         </div>
                                     </div>
                             }

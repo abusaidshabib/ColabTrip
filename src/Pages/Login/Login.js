@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { Col, Form, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/UserContext/UserContext';
 import GoogleSignIn from '../Shared/GoogleSignIn/GoogleSignIn';
 
@@ -9,16 +9,18 @@ const Login = () => {
 
     const { register, formState: { errors }, handleSubmit } = useForm();
     const { signIn } = useContext(AuthContext);
-    const { err, setErr } = useState(' ');
+    const { err, setErr } = useState('');
     const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
 
     const handleLogin = data => {
         console.log(data);
         console.log(errors);
         signIn(data.email, data.password)
             .then(result => {
-                const user = result.user;
-                console.log(user)
+                result = result.user;
+                navigate(from, { replace: true });
             })
             .catch(error => {
                 console.log(error)

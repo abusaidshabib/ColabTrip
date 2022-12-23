@@ -12,7 +12,7 @@ const Footer = () => {
                     <img className='w-25' alt='' src={footerLogo} />
                     <p className='mt-4 mb-1'>Follow us On:</p>
                     <div className='fs-4'>
-                        <a className='text-white me-2' href='#'><BsFacebook /></a>
+                        <a className='text-white me-2' href='https://www.facebook.com/tripwallet?mibextid=ZbWKwL'><BsFacebook /></a>
                         <a className='text-white me-2' href='#'><GrInstagram /></a>
                         <a className='text-white' href='#'><BsWhatsapp /></a>
                     </div>

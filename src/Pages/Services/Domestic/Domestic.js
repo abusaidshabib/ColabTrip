@@ -8,7 +8,7 @@ const Domestic = () => {
     const [tours, setTour] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/tours?category=domestic')
+        fetch('https://tripwallet-backend.vercel.app/tours?category=domestic')
             .then(res => res.json())
             .then(data => {
                 console.log(data);

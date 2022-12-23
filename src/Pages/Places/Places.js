@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Card, Col, Container, Form, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/UserContext/UserContext';
 
 
@@ -9,8 +10,10 @@ const Places = () => {
     const { user } = useContext(AuthContext);
     const { register, formState: { errors }, handleSubmit } = useForm();
     const [dat, setData] = useState();
+    const navigate = useNavigate();
+    const from = '/';
     useEffect(() => {
-        fetch(`http://localhost:5000/tours/${localStorage.getItem('Id')}`)
+        fetch(`https://tripwallet-backend.vercel.app/tours/${localStorage.getItem('Id')}`)
             .then(res => res.json())
             .then(data => {
                 setData(data);
@@ -28,7 +31,7 @@ const Places = () => {
         const newData = { name, email, number, message, title };
 
 
-        fetch('http://localhost:5000/booking', {
+        fetch('https://tripwallet-backend.vercel.app/booking', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
@@ -38,6 +41,10 @@ const Places = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
+                if (data.acknowledged) {
+                    alert('Success fully booked');
+                    navigate(from, { replace: true });
+                }
             })
             .catch(error => console.log(error));
 
@@ -70,13 +77,14 @@ const Places = () => {
                         </div>
                         <Card.Body>
                             <Card.Title>{dat?.title}</Card.Title>
-                            <Card.Text>
+                            <pre className='text-start'>
                                 {dat?.details}
-                            </Card.Text>
-
+                            </pre>
                         </Card.Body>
                     </Card>
-
+                </Col>
+                <Col>
+                    <p className='display-4 fw-bold'>Book Options</p>
                     <Form onSubmit={handleSubmit(handleLogin)} className='text-start'>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Name</Form.Label>
@@ -97,9 +105,6 @@ const Places = () => {
                         </Form.Group>
                         <input className='btn btn-primary w-100' type="submit" />
                     </Form>
-                </Col>
-                <Col>
-                    <p>Book Options</p>
                 </Col>
             </Row>
         </Container>

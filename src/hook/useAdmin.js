@@ -5,7 +5,7 @@ const useAdmin = email =>{
     const [isAdminLoading, setIsAdminLoading] = useState(true);
     useEffect(()=>{
         if(email){
-            fetch(`http://localhost:5000/admin/${email}`)
+            fetch(`https://tripwallet-backend.vercel.app/admin/${email}`)
             .then(res => res.json())
             .then(data => {
                 setIsAdmin(data.isAdmin);

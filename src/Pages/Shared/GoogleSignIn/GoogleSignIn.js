@@ -20,7 +20,8 @@ const GoogleSignIn = () => {
         googlePopUp(googleProvider)
             .then(result => {
                 const user = result.user;
-                newUser(user?.email, user?.displayName)
+                newUser(user?.email, user?.displayName);
+                navigate(from, { replace: true });
             })
             .catch(error => console.error(error));
     }

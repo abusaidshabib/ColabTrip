@@ -35,7 +35,7 @@ const AddTours = () => {
         const newTour = {
             location, title, img, details, sdate, edate, duration, fee, size, language, category
         }
-        fetch('http://localhost:5000/tours', {
+        fetch('https://tripwallet-backend.vercel.app/tours', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
@@ -98,8 +98,8 @@ const AddTours = () => {
                     </Form.Group>
                     {/* Duration of tour */}
                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Duration <b>(numbers only)</b></Form.Label>
-                        <input {...register("duration", { required: "Duration is Required" })} type="number" className="form-control" id="exampleInputText" aria-describedby="textHelp" placeholder='Tour Duration' />
+                        <Form.Label>Duration</Form.Label>
+                        <input {...register("duration", { required: "Duration is Required" })} type="text" className="form-control" id="exampleInputText" aria-describedby="textHelp" placeholder='Tour Duration' />
                     </Form.Group>
                     {/* PackageFee */}
                     <Form.Group className="mb-3" controlId="formBasicEmail">

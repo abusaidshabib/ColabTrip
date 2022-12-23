@@ -2,6 +2,11 @@ import React from 'react';
 import { Card, Container } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import miz from '../../assets/Md. Mizanur Rahman.jpeg';
+import zak from '../../assets/Zakaria Hossain.jpeg';
+import naz from '../../assets/Nazmun Nahar.jpeg';
+import az from '../../assets/Aziz Faisal Nayem.jpeg';
+import './AboutUs.css';
 
 const AboutUs = () => {
     return (
@@ -19,7 +24,6 @@ const AboutUs = () => {
             </div>
             <div className='d-flex justify-content-center align-items-center'>
                 <div className="p-5">
-                    <h5 className='text-uppercase display-6 fw-bold'>What we do?</h5>
                     <p className='fs-6'>We feel both pleased and honored to introduce ourselves as one of the growing travel companies in Bangladesh. We at Trip Wallet would like to offer you every kind of service here in Bangladesh and abroad. Our team of professionals, with a tremendous wealth of experience in the travel trade, is capable of fulfilling every client needs while traveling with us. Travel Wallet Solutions is a Tour Operator serving the tourism industries. We are one of the growing Tour Operators of Bangladesh, we operate from Dhaka and we know our country as you know the palm of your hand. Our main goal has been always complete client satisfaction. We only use high quality products & services that we have been able to acquire through this of our operations. IF you want a lifetime experience of your visit to Bangladesh or abroad your choice is Trip Wallet, where everything is supervised by the owners, so we can assure you only the highest quality.</p>
                 </div>
             </div>
@@ -61,7 +65,7 @@ const AboutUs = () => {
                     <Col>
                         <h3>Communication</h3>
                         <p>We make emphasis on communication (external and internal) so our representatives can fully understand the client’s needs. This principle makes us serve our clients as they deserve.
-</p>
+                        </p>
                     </Col>
                     <Col>
                         <h3>Innovation</h3>
@@ -74,7 +78,7 @@ const AboutUs = () => {
                     <Col>
                         <h3>Quality</h3>
                         <p>In all we do. Our true quality commitment allows us to make promises become facts, creating tangible results and benefits.
-</p>
+                        </p>
                     </Col>
                     <Col>
                         <h3>Teamwork</h3>
@@ -87,17 +91,54 @@ const AboutUs = () => {
                     <Col>
                         <h3>Responsibility</h3>
                         <p>We are concerned in doing the right thing.
-</p>
-                    </Col>
-                    <Col>
-                        <h3>Teamwork</h3>
-                        <p>
-
                         </p>
                     </Col>
                 </Row>
+                <Row>
+                    <Col>
+                        <h3>OUR SERVICES</h3>
+                        <ul className='ist-group list-group-flush'>
+                            <li>Individual Tour Package</li>
+                            <li>Group Tour Package</li>
+                            <li>Corporate Group Tour Package</li>
+                            <li>Study Tour Package</li>
+                            <li>Domestic Tour Package</li>
+                            <li>International Tour Package.</li>
+                            <li>Honeymoon Package</li>
+                            <li>Customized tour Package</li>
+                            <li>Hotel/Resort/Cottage Booking</li>
+                            <li>All Kind of Ticket Booking</li>
+                            <li>Visa Service</li>
+                            <li>Transportation Service</li>
+                        </ul>
+                    </Col>
+                </Row>
             </Container>
-
+            <div class="container px-4 text-center">
+                <h3 className='fw-bold display-5 py-5'>Leadership Team</h3>
+                <div class="row gx-5">
+                    <div class="col">
+                        <img src={miz} className="imgSize rounded-circle" alt="" />
+                        <br />
+                        <p>Md. Mizanur Rahman</p>
+                    </div>
+                    <div class="col">
+                        <img src={zak} className="imgSize rounded-circle" alt="" />
+                        <br />
+                        <p>Zakaria Hossain</p>
+                    </div>
+                    <div class="col">
+                        <img src={naz} className="imgSize rounded-circle" alt="" />
+                        <br />
+                        <p>Nazmun Nahar</p>
+                    </div>
+                    <div class="col">
+                        <img src={az} className="imgSize rounded-circle" alt="" />
+                        <br />
+                        <p>Aziz Faisal Nayem</p>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };

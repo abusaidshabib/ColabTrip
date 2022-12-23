@@ -2,11 +2,14 @@ import React, { useContext } from 'react';
 import { FloatingLabel } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { AuthContext } from '../../Context/UserContext/UserContext';
 
 const Addreview = () => {
     const { user } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const from = '/';
 
     const handleReview = event => {
         event.preventDefault();
@@ -19,7 +22,7 @@ const Addreview = () => {
         const sendreview = {
             review, name, email, imgUrl
         }
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://tripwallet-backend.vercel.app/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -29,8 +32,10 @@ const Addreview = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.acknowledged) {
-                    toast("Review Send Successfully");
+                    alert('Success fully booked');
+                    navigate(from, { replace: true });
                     form.reset();
+
                 }
             })
             .catch(error => console.error(error));

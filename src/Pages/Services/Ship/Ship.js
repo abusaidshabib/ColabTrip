@@ -1,12 +1,15 @@
 import React, { useContext } from 'react';
 import { Col, Form, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Context/UserContext/UserContext';
 
 const Ship = () => {
     const { user } = useContext(AuthContext);
 
     const { register, formState: { errors }, handleSubmit } = useForm();
+    const navigate = useNavigate();
+    const from = '/';
 
     const handleLogin = event => {
         const name = user?.displayName;
@@ -19,7 +22,7 @@ const Ship = () => {
         const newData = { name, email, number, message, category };
 
 
-        fetch('http://localhost:5000/tickets', {
+        fetch('https://tripwallet-backend.vercel.app/tickets', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
@@ -28,6 +31,8 @@ const Ship = () => {
         })
             .then(res => res.json())
             .then(data => {
+                alert('Success fully booked');
+                navigate(from, { replace: true });
             })
             .catch(error => console.log(error));
 

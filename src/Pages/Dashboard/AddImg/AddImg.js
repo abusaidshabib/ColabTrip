@@ -21,7 +21,7 @@ const AddImg = () => {
             img
         }
 
-        fetch('http://localhost:5000/gallery', {
+        fetch('https://tripwallet-backend.vercel.app/gallery', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
